@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProgrammerGame</string>
+    <string name="load_save">Load Save</string>
+    <string name="play_game">Play Game</string>
+</resources>
