@@ -1,7 +1,6 @@
 package com.example.di
 
 import android.app.Application
-import android.content.Context
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -14,5 +13,11 @@ class AppModule(private var application: Application) {
     fun providesAppContext(): Application {
         return application
     }
+//    @Provides
+//    @Singleton
+//    fun provideGameValue (id: Int,money:Int): GameValue{
+//        return GameValue(id,money
+//        )
+//    }
 
 }

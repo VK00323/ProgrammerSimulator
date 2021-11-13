@@ -2,7 +2,7 @@ package com.example.di
 
 import android.app.Application
 
-class App: Application() {
+class App : Application() {
     lateinit var appComponent: AppComponent
 
 
@@ -12,8 +12,6 @@ class App: Application() {
             .appModule(AppModule(this))
             .build()
     }
-
-
 
 
 }

@@ -10,8 +10,8 @@ import javax.inject.Singleton
 @Component(modules = [AppModule::class, DataBaseModule::class])
 interface AppComponent {
 
-    fun inject (playGameActivity: PlayGameActivity)
-    fun inject (homeActivity: HomeActivity)
-    fun inject (viewModel: GameViewModel)
+    fun inject(playGameActivity: PlayGameActivity)
+    fun inject(homeActivity: HomeActivity)
+    fun inject(viewModel: GameViewModel)
 
 }
