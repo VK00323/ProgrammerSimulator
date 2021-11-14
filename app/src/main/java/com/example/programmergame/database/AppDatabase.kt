@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.programmergame.model.GameValue
 
-@Database(entities = [GameValue::class], version = 15, exportSchema = false)
+@Database(entities = [GameValue::class], version = 18, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     companion object {
         private const val DB_NAME = "main.db"

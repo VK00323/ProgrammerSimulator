@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
         val intentPlayGameActivity = Intent(this, PlayGameActivity::class.java)
 
 
+
         buttonPlayGame.setOnClickListener {
             startActivity(intentPlayGameActivity)
 
