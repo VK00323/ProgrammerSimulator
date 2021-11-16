@@ -2,4 +2,15 @@
     <string name="app_name">ProgrammerGame</string>
     <string name="load_save">Load Save</string>
     <string name="play_game">Play Game</string>
+    <string name="button_computer">Button computer</string>
+    <string name="button_vpn">Button VPN</string>
+    <string name="button_study">Button study</string>
+    <string name="button_program">Button program</string>
+    <string name="button_work">Button work</string>
+    <string name="button_consolidate_information">Button consolidate information</string>
+    <string name="_0">0</string>
+    <string name="image_stealth">Image stealth</string>
+    <string name="image_btc">Image BTC</string>
+    <string name="image_rub">Image RUB</string>
+    <string name="image_energy">Image energy</string>
 </resources>
