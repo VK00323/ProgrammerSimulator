@@ -13,4 +13,7 @@
     <string name="image_btc">Image BTC</string>
     <string name="image_rub">Image RUB</string>
     <string name="image_energy">Image energy</string>
+    <string name="processor_label">Процессор:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.annotation.RequiresApi
@@ -26,6 +27,7 @@ class PlayGameFragment : Fragment() {
     private lateinit var textViewEnergy: TextView
     private lateinit var textViewStealth: TextView
     private lateinit var progressBarEnergy: ProgressBar
+    private lateinit var buttonComputer: ImageButton
 
 
 
@@ -63,15 +65,23 @@ class PlayGameFragment : Fragment() {
         progressBarEnergy.max = 50
         progressBarEnergy.min = 0
 
+
         buttonProgram.setOnClickListener {
             viewModel.clickButtonProgram()
         }
         buttonWork.setOnClickListener {
             (activity as HomeActivity).supportFragmentManager.popBackStack()
                 (activity as HomeActivity).finish()
-
-
         }
+        buttonComputer.setOnClickListener {
+            (activity as HomeActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_container, ComputerFragment::class.java, null)
+                .commit()
+        }
+
+
+
+
     }
     private fun initView(view: View){
         viewModel = ViewModelProvider(this)[GameViewModel::class.java]
@@ -82,6 +92,7 @@ class PlayGameFragment : Fragment() {
             textViewStealth = findViewById(R.id.textViewStealth)
             progressBarEnergy = findViewById(R.id.progressBarRating)
             buttonWork = findViewById(R.id.buttonWork)
+            buttonComputer = findViewById(R.id.buttonComputer)
         }}
 
 

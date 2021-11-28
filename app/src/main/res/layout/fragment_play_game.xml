@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:text="Программировать"
+            android:soundEffectsEnabled="true"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
@@ -50,7 +51,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/buttonWork"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.6"
+            />
 
         <TextView
             android:id="@+id/textViewMoneyRub"
@@ -185,6 +187,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/purple_200"
             app:srcCompat="@drawable/blocknot" />
 
         <ImageButton
@@ -197,6 +200,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonConsolidateInfo"
+            android:background="@color/purple_200"
             app:srcCompat="@drawable/workbutton" />
 
         <ImageButton
@@ -209,6 +213,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonWorker"
+            android:background="@color/purple_200"
             app:srcCompat="@drawable/programbutton" />
 
         <ImageButton
@@ -221,6 +226,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonVPN"
+            android:background="@color/purple_200"
             app:srcCompat="@drawable/studybutton" />
 
         <ImageButton
@@ -228,9 +234,12 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:contentDescription="@string/button_vpn"
+            android:background="@color/purple_200"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonStudy"
             app:layout_constraintHorizontal_bias="0.5"
+            android:adjustViewBounds="true"
+            style="@style/Animation.Design.BottomSheetDialog"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonProgramer"
             app:srcCompat="@drawable/vpnbutton" />
@@ -245,7 +254,11 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/buttonStudy"
-            app:srcCompat="@drawable/computerbutton" />
+            android:background="@color/purple_200"
+            app:srcCompat="@drawable/computerbutton"
+
+
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
