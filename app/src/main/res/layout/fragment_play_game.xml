@@ -7,7 +7,7 @@
     android:padding="3dp"
 
 
-    tools:context=".PlayGameActivity">
+    tools:context=".StatisticFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

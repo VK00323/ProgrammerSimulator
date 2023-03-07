@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.programmergame.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/navigation_statistic" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_statistic"
+        android:name="com.example.programmergame.StatisticFragment"
+        android:label="@string/play_game"
+        tools:layout="@layout/fragment_play_game">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="params"
+            app:argType="com.example.programmergame.TestParams"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.example.programmergame.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job">
+        <action
+            android:id="@+id/action_jobFragment_to_HomeFragment3"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/programmingFragment"
+        android:name="com.example.programmergame.ProgrammingFragment"
+        android:label="fragment_programming"
+        tools:layout="@layout/fragment_programming">
+        <action
+            android:id="@+id/action_programmingFragment_to_HomeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_internetAndVpn"
+        android:name="com.example.programmergame.InternetAndVpnFragment"
+        android:label="fragment_internet_and_vpn"
+        tools:layout="@layout/fragment_internet_and_vpn">
+        <action
+            android:id="@+id/action_internetAndVpnFragment_to_HomeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_hardware"
+        android:name="com.example.programmergame.HardwareFragment"
+        android:label="fragment_hardware"
+        tools:layout="@layout/fragment_hardware">
+        <action
+            android:id="@+id/action_hardwareFragment_to_HomeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_courses"
+        android:name="com.example.programmergame.CoursesFragment"
+        android:label="fragment_courses"
+        tools:layout="@layout/fragment_courses">
+        <action
+            android:id="@+id/action_coursesFragment_to_HomeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
