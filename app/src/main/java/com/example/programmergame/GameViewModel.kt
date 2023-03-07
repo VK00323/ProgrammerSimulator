@@ -30,7 +30,9 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    //Увелечение значения Денег
+    /**
+     *     Увелечение значения Денег
+     */
     fun download() {
         var randomRub: Int
         viewModelScope.launch(Dispatchers.IO) {

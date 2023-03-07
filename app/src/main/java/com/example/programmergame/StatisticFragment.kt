@@ -1,42 +1,60 @@
 package com.example.programmergame
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.example.di.App
+import androidx.navigation.fragment.navArgs
 import com.example.programmergame.database.AppDatabase
+import com.example.programmergame.databinding.FragmentPlayGameBinding
 import javax.inject.Inject
 
-class PlayGameActivity : AppCompatActivity() {
-    lateinit var buttonProgram: Button
+class StatisticFragment : Fragment() {
+
+    private var _binding: FragmentPlayGameBinding? = null
+    private val binding get() = _binding!!
+
     lateinit var viewModel: GameViewModel
-    lateinit var textViewMoneyRub: TextView
+    var params: TestParams? = null
+
 
     @Inject
     lateinit var db: AppDatabase
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        (application as App).appComponent.inject(this)
-        supportActionBar?.hide()
-        setContentView(R.layout.activity_play_game)
-        buttonProgram = findViewById(R.id.buttonProgram)
-        textViewMoneyRub = findViewById(R.id.textViewMoneyRub)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentPlayGameBinding.inflate(inflater, container, false)
+        return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        (requireActivity().application as App).appComponent.inject(this)
+//         params = arguments?.getSerializable("navigation data") as TestParams
+
         viewModel = ViewModelProvider(this)[GameViewModel::class.java]
 
         lifecycleScope.launchWhenResumed {
             viewModel.allGameValue()
-                .observe(this@PlayGameActivity, {
-                    textViewMoneyRub.text = it?.toString() ?: "100"
-                })
+                .observe(viewLifecycleOwner) {
+                    binding.textViewMoneyRub.text = it?.toString() ?: "100"
+                }
         }
 
-        buttonProgram.setOnClickListener {
+        binding.buttonProgram.setOnClickListener {
             viewModel.download()
         }
+
+        val args: StatisticFragmentArgs by navArgs()
+        val rt = args.params
+        binding.textViewInfo.text = rt?.first + rt?.second
+
     }
 }
 //        viewModel.allGameValue().observe(this, { gameValue ->
