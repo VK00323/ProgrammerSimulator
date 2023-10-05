@@ -2,6 +2,7 @@ package com.example.programmergame
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.WindowCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -28,11 +29,11 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        val bottomNavigation: BottomNavigationView = binding.bottomNav
+        val bottomNavigation: BottomNavigationView = binding.bottomNavigation
         val bottomNavConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
-                R.id.navigation_courses,
+                R.id.navigation_internetAndVpn,
                 R.id.navigation_hardware,
                 R.id.navigation_courses,
                 R.id.navigation_statistic,
@@ -40,6 +41,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, bottomNavConfiguration)
         bottomNavigation.setupWithNavController(navController)
+//        TODO Make switcher
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }
 
     override fun onSupportNavigateUp(): Boolean {

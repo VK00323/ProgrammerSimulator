@@ -5,8 +5,8 @@
     <string name="home_fragment_label">Home</string>
     <string name="title_home">Home</string>
     <string name="title_courses">Courses</string>
-    <string name="title_hardware">Notifications</string>
-    <string name="title_internet_and_vpn">Internet and VPN</string>
+    <string name="title_hardware">Hardware</string>
+    <string name="title_internet_and_vpn">VPN</string>
     <string name="title_statistic">Statistic</string>
 
 
