@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="backgroundPrimary" format="reference" />
+    <attr name="backgroundNavBar" format="reference" />
+
+    <attr name="colorTextPrimaryVariant" format="reference" />
+    <attr name="colorTextSecondary" format="reference" />
+    <attr name="colorTextSecondaryVariant" format="reference" />
+    <attr name="colorTextInverted" format="reference" />
+    <attr name="colorTextAccent" format="reference" />
+    <attr name="colorTextNegative" format="reference" />
+    <attr name="colorTextPositive" format="reference" />
+    <attr name="colorTextWarning" format="reference" />
+    <attr name="defaultTextColor" format="reference" />
+
+    <attr name="colorBgInverted" format="reference" />
+    <attr name="colorBgSecondary" format="reference" />
+    <attr name="colorBgPrimaryVariant" format="reference" />
+    <attr name="colorBgPrimary" format="reference" />
+    <attr name="colorBgError" format="reference" />
+    <attr name="colorBgWarning" format="reference" />
+    <attr name="colorBgNeutral" format="reference" />
+    <attr name="colorBgSuccess" format="reference" />
+
+    <attr name="colorAccentNormal" format="reference" />
+    <attr name="colorAccentPressed" format="reference" />
+    <attr name="colorAccentDisabled" format="reference" />
+    <attr name="colorSecondaryNormal" format="reference" />
+    <attr name="colorSecondaryPressed" format="reference" />
+    <attr name="colorSecondaryDisabled" format="reference" />
+    <attr name="colorStateWarning" format="reference" />
+    <attr name="colorStateError" format="reference" />
+    <attr name="colorStateSuccess" format="reference" />
+
+</resources>

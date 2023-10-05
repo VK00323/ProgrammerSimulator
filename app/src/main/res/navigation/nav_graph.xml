@@ -36,7 +36,7 @@
     <fragment
         android:id="@+id/jobFragment"
         android:name="com.example.programmergame.JobFragment"
-        android:label="fragment_job"
+        android:label="Job"
         tools:layout="@layout/fragment_job">
         <action
             android:id="@+id/action_jobFragment_to_HomeFragment3"
@@ -46,7 +46,7 @@
     <fragment
         android:id="@+id/programmingFragment"
         android:name="com.example.programmergame.ProgrammingFragment"
-        android:label="fragment_programming"
+        android:label="Programming"
         tools:layout="@layout/fragment_programming">
         <action
             android:id="@+id/action_programmingFragment_to_HomeFragment"
@@ -56,7 +56,7 @@
     <fragment
         android:id="@+id/navigation_internetAndVpn"
         android:name="com.example.programmergame.InternetAndVpnFragment"
-        android:label="fragment_internet_and_vpn"
+        android:label="Internet and VPN"
         tools:layout="@layout/fragment_internet_and_vpn">
         <action
             android:id="@+id/action_internetAndVpnFragment_to_HomeFragment"
@@ -66,7 +66,7 @@
     <fragment
         android:id="@+id/navigation_hardware"
         android:name="com.example.programmergame.HardwareFragment"
-        android:label="fragment_hardware"
+        android:label="Hardware"
         tools:layout="@layout/fragment_hardware">
         <action
             android:id="@+id/action_hardwareFragment_to_HomeFragment"
@@ -76,7 +76,7 @@
     <fragment
         android:id="@+id/navigation_courses"
         android:name="com.example.programmergame.CoursesFragment"
-        android:label="fragment_courses"
+        android:label="Courses"
         tools:layout="@layout/fragment_courses">
         <action
             android:id="@+id/action_coursesFragment_to_HomeFragment"

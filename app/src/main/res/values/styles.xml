@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ProgrammerGame.CustomBottomNavigationView">
+        <item name="enforceTextAppearance">true</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="android:background">?backgroundNavBar</item>
+        <item name="itemIconTint">@color/mtrl_navigation_bar_colored_item_tint</item>
+<!--        Цвет клика на кнопку(круг вокруг кнопки)-->
+        <item name="itemRippleColor">#FFEB3B</item>
+        <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+        <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
+        <item name="itemTextColor">@color/mtrl_navigation_bar_colored_item_tint</item>
+    </style>
+
+    <style name="Theme.ProgrammerGame.CustomTextButton" parent="Widget.Material3.Button.TextButton">
+        <item name="android:paddingLeft">@dimen/m3_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/m3_btn_padding_right</item>
+        <item name="strokeColor">@color/m3_button_outline_color_selector</item>
+        <item name="strokeWidth">@dimen/m3_comp_outlined_button_outline_width</item>
+    </style>
+</resources>
