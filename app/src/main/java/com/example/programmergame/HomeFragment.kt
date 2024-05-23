@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.programmergame.databinding.FragmentHomeBinding
+import com.parse.ParseObject
 import java.io.Serializable
 
 class HomeFragment : Fragment() {
@@ -29,7 +30,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.ladButton.setOnClickListener {
-//Todo implement load game
+//            saveNewPlayer()
         }
 
         binding.startButton.setOnClickListener {
@@ -40,6 +41,15 @@ class HomeFragment : Fragment() {
                 actions
             )
         }
+    }
+
+    private fun saveNewPlayer() {
+        val  soccerPlayer = ParseObject("SoccerPlayer");
+        soccerPlayer.put("playerName", "A. Wed");
+        soccerPlayer.put("yearOfBirth", 1997);
+        soccerPlayer.put("emailContact", "a.wed@email.io");
+        soccerPlayer.put("attributes", listOf("fast", "good conditioning"));
+        soccerPlayer.saveInBackground();
     }
 
     override fun onDestroyView() {

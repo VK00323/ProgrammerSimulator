@@ -9,5 +9,17 @@
     <string name="title_internet_and_vpn">VPN</string>
     <string name="title_statistic">Statistic</string>
 
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">VLHYrflKbQUiZWPkiBrAndhYe09HC1lQfUAQM89v</string>
+    <string name="back4app_client_key">sMpMC4nUBY3oKQTMX8xmrCj9yo0clHfpTVi3BKHI</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 
 </resources>

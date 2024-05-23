@@ -81,5 +81,24 @@
         <action
             android:id="@+id/action_coursesFragment_to_HomeFragment"
             app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_courses_to_bottomSheetTest"
+            app:destination="@id/bottomSheetFragmentTest2" />
     </fragment>
+
+    <dialog
+        android:id="@+id/bottomSheetFragmentTest2"
+        android:name="com.example.programmergame.BottomSheetFragmentTest"
+        android:label="BottomSheetFragmentTest">
+
+    <action
+        android:id="@+id/action_navigation_bottomSheetFragmentTest2_to_fullScreenTestFragment"
+        app:destination="@id/fullScreenTestFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/fullScreenTestFragment"
+        android:name="com.example.programmergame.FullScreenTestFragment"
+        android:label="FullScreenTestFragment" />
+
 </navigation>
