@@ -51,12 +51,12 @@ class HardwareFragment : Fragment() {
         showSystemUi = true,
     )
     @Composable
-    fun HelloPreview(){
+    fun HelloPreview() {
         Hello("Hardware")
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[HardwareViewModel::class.java]
         // TODO: Use the ViewModel
     }

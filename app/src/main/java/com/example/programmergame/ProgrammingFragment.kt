@@ -22,9 +22,9 @@ class ProgrammingFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_programming, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProgrammingViewModel::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this)[ProgrammingViewModel::class.java]
         // TODO: Use the ViewModel
     }
 

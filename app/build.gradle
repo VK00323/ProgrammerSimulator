@@ -2,9 +2,12 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id("com.google.gms.google-services")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0" // this version matches your Kotlin version
 }
 
 apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 
 android {
     compileSdk 34
@@ -38,9 +41,6 @@ android {
         compose true
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.0"
-    }
     namespace 'com.example.programmergame'
 
 }
@@ -104,6 +104,15 @@ dependencies {
     debugImplementation 'com.facebook.flipper:flipper:0.244.0'
     debugImplementation 'com.facebook.soloader:soloader:0.10.5'
     releaseImplementation 'com.facebook.flipper:flipper-noop:0.244.0'
+
+//    Firebase cloud Messaging
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    // TODO: Add the dependencies for Firebase products you want to use
+    // See https://firebase.google.com/docs/android/setup#available-libraries
+    // For example, add the dependencies for Firebase Authentication and Cloud Firestore
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-messaging")
 
 //    Flipper Snapshot
 //    debugImplementation 'com.facebook.flipper:flipper:0.244.1-SNAPSHOT'

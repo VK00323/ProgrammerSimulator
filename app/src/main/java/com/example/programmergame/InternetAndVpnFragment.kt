@@ -22,9 +22,9 @@ class InternetAndVpnFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_internet_and_vpn, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(InternetAndVpnViewModel::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this)[InternetAndVpnViewModel::class.java]
         // TODO: Use the ViewModel
     }
 

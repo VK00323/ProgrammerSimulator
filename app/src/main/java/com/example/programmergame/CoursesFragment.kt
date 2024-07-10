@@ -23,6 +23,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.Scopes
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.Scope
+import com.google.firebase.installations.FirebaseInstallations
+import com.google.firebase.messaging.FirebaseMessaging
 import com.parse.ParseUser
 import com.parse.google.ParseGoogleUtils
 
@@ -47,6 +49,12 @@ class CoursesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+//        TODO тест для обновления токена
+        FirebaseMessaging.getInstance().deleteToken()
+        FirebaseInstallations.getInstance().delete()
+        FirebaseMessaging.getInstance().token
+        Log.d("AAAAA", "token deleted" )
+
         coursesViewModel = ViewModelProvider(this)[CoursesViewModel::class.java]
 
         _binding = FragmentCoursesBinding.inflate(inflater, container, false)

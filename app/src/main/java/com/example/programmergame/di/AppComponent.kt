@@ -1,4 +1,4 @@
-package com.example.di
+package com.example.programmergame.di
 
 import com.example.programmergame.GameViewModel
 import com.example.programmergame.MainActivity

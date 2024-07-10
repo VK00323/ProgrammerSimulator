@@ -1,4 +1,4 @@
-package com.example.di
+package com.example.programmergame.di
 
 import android.app.Application
 import com.example.programmergame.BuildConfig
@@ -8,8 +8,8 @@ import com.facebook.flipper.android.utils.FlipperUtils
 import com.facebook.flipper.plugins.inspector.DescriptorMapping
 import com.facebook.flipper.plugins.inspector.InspectorFlipperPlugin
 import com.facebook.soloader.SoLoader
+import com.google.firebase.FirebaseApp
 import com.parse.Parse
-import com.parse.google.ParseGoogleUtils
 
 class App : Application() {
     lateinit var appComponent: AppComponent
@@ -17,6 +17,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        FirebaseApp.initializeApp(this)
         appComponent = DaggerAppComponent.builder()
             .appModule(AppModule(this))
             .build()

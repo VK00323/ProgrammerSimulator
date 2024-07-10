@@ -42,9 +42,24 @@ class HomeFragment : Fragment() {
             )
         }
     }
+//
+//    @Composable
+//    fun Hello(name: String) {
+//        Text(
+//            text = "Hello $name",
+//            modifier = Modifier.padding(32.dp),
+//            fontSize = 32.sp
+//        )
+//    }
+
+//    @Preview
+//    @Composable
+//    fun HelloPreview(){
+//        Hello(name = "Compose")
+//    }
 
     private fun saveNewPlayer() {
-        val  soccerPlayer = ParseObject("SoccerPlayer");
+        val soccerPlayer = ParseObject("SoccerPlayer");
         soccerPlayer.put("playerName", "A. Wed");
         soccerPlayer.put("yearOfBirth", 1997);
         soccerPlayer.put("emailContact", "a.wed@email.io");

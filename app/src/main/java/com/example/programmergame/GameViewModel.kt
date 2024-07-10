@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.di.App
+import com.example.programmergame.di.App
 import com.example.programmergame.database.AppDatabase
 import com.example.programmergame.model.GameValue
 import kotlinx.coroutines.Dispatchers
